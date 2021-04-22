@@ -1,2 +1,2 @@
 # Xaringan_tutorial
-Tutorial to make presentations using xaringan
+Tutorial para realizar presentaciones usando la libreria de `Xaringan`
