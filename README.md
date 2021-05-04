@@ -38,4 +38,4 @@ Busquen los archivos sydney.css y sydney-fonts.css
 
 En github hagan *fork* al repo para añadirlo a su lista de repos
 
-La presentación la puedes consultar desde [aquí](file:///Users/rodolfochavez/RNAseq/Xaringan_tutorial/Slides/Xaringan_tutorial.html#1)
+La presentación la puedes consultar desde [aquí](https://necrosnake91.github.io/Xaringan_tutorial/Slides/Xaringan_tutorial.html)
