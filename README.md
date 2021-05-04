@@ -37,3 +37,5 @@ Visita el repo de la universidad de Sydney, [sydney_xaringan](https://github.com
 Busquen los archivos sydney.css y sydney-fonts.css 
 
 En github hagan *fork* al repo para añadirlo a su lista de repos
+
+La presentación la puedes consultar desde [aquí](https://necrosnake91.github.io/Xaringan_tutorial/Slides/Xaringan_tutorial.html)
