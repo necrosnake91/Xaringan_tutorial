@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = T, eval = F)
 
 ```{r xaringan-themer, echo = F, include = F, eval=T}
 library(xaringanthemer)
-style_duo_accent(primary_color = "#23395b", secondary_color = "#EAECEE")
+style_mono_light(base_color = "#23395b")
 ```
 
 ```{css, echo = F, eval = T}
@@ -33,6 +33,42 @@ style_duo_accent(primary_color = "#23395b", secondary_color = "#EAECEE")
 .scroll-output {
   height: 80%;
   overflow-y: scroll;
+}
+
+/* From https://github.com/garthtarr/sydney_xaringan */
+blockquote, .blockquote {
+  display: block;
+  margin-top: 0.1em;
+  margin-bottom: 0.2em;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-left: solid 10px #0148A4;
+  border-top: solid 2px #0148A4;
+  border-bottom: solid 2px #0148A4;
+  border-right: solid 2px #0148A4;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+  /* background-color: #e64626; */
+  color: #e64626;
+  padding: 0.5em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* From https://github.com/garthtarr/sydney_xaringan */
+.content-box-blue,
+.content-box-gray,
+.content-box-grey,
+.content-box-army,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 0 0 15px;
+  overflow: hidden;
+  padding: 0px 20px 0px 20px;
+  width: 100%;
 }
 ```
 
@@ -62,6 +98,7 @@ Una vez instalados, en **RStudio** descarga los siguientes paquetes desde el rep
 ---
 ## `r icons::fontawesome("github")`  Archivos
 
+.scroll-output[
 Vayan al repo de la universidad de Sydney, [sydney_xaringan](https://github.com/garthtarr/sydney_xaringan) y:
 
 - Clonen el repositorio usando la terminal (Mac y Linux)
@@ -77,6 +114,8 @@ knitr::include_graphics("http://www.indesgua.org.gt/wp-content/uploads/2018/01/T
 ```
 
 .small[Práctica basada en el tutorial de [Garth Tarr](https://github.com/garthtarr)]
+]
+
 ---
 class: inverse, center, middle
 
@@ -174,7 +213,7 @@ La librería de Xaringan fue creada para generar presentaciones con sintaxis de 
 
 3. Dificultad para renderizar código de paquetes como *glimma*
 
-4. Hasta el momento no sé como hacer correr código interno de *R* y que los gráficos de salida se muestren en la presentación final (web)
+4. Hasta el momento no sé como hacer correr código interno de *R* y que los gráficos de salida se muestren en la web
 ]
 
 ---
@@ -214,8 +253,9 @@ output:
 
 A esta sección se le conoce como *Yet Another Markup Language* (YAML) y su objetivo es configurar nuestro archivo en formato *Markdown*
 ---
-## Slides
+## Xaringan
 
+.scroll-output[
 Una vez configurado el **YAML** podemos generar nuestras *slides*.  
 Para introducir una nueva *slide*
 ```{r}
@@ -231,11 +271,9 @@ Contenido de la slide
 
 ---
 ```
---
 
 Es aquí donde utilizas la sintaxis de *Markdown* para añadir texto a tu slide, vínculos, listas, imágenes ...
 
---
 
 Para insertar "animación" a tu contenido
 
@@ -246,7 +284,7 @@ Para insertar "animación" a tu contenido
   
 - Elemento '2' de la lista
 ```
-
+]
 ---
 ## Xaringan
 
@@ -316,7 +354,7 @@ Se puede incrementar el número de formatos:
 
 `color[]`
 
-Este parámetro forma parte del css *hygge* y soporta los siguientes colores:
+Esta función forma parte del css *hygge* y soporta los siguientes colores:
 
 - .black[negro] `.black[]`
 
@@ -338,6 +376,7 @@ Puedes emplear este formato para colorear una letra, palabra o frase completa
 
 ---
 ## Xaringan
+.scroll-output[
 
 > Para colorear el fondo del texto:
 
@@ -366,9 +405,10 @@ También es posible extender el ancho del fondo coloreado usando:
 `.full-width[.content-box-blue[]]`
 
 .full-width[.content-box-blue[I feel blue with `.content-box-blue[]` option]]
-
+]
 ---
 ## Xaringan
+.scroll-output[
 
 > Separar el texto en dos columnas
 
@@ -404,12 +444,15 @@ O elementos gráficos como:
 en la parte derecha del slide con `.pull-right[]`
 ]
 
-*La distribución de los elementos es personalizadar*
+*La distribución de los elementos es personalizada*
+]
 
 ---
 ## Xaringan
 
-> Insertar íconos 
+.scroll-output[
+
+> Insertar íconos
 
 Dos opciones:
 
@@ -433,6 +476,7 @@ r icons::icon_style(icons::fontawesome("fighter-jet"), fill = "blue")
 #Cambiar el tamaño del ícono
 r icons::icon_style(icons::fontawesome("fighter-jet"), scale = 3)
 ```
+]
 
 ---
 ## Xaringan
@@ -532,6 +576,24 @@ class: inverse, center, middle
 ```
 ]
 ---
+class: inverse, bottom
+background-image: url("Rembrandt.jpeg")
+background-position: 50% 50%
+background-size: contain
+
+.small[
+.left[
+Esta imagen se insertó:
+```
+---
+class: inverse, bottom
+background-image: url("Rembrandt.jpeg")
+background-position: 50% 50%
+background-size: contain
+```
+]
+]
+---
 class: inverse
 background-image: url("Xaringan-themer.png")
 background-position: 50% 50%
@@ -568,5 +630,45 @@ style_duo_accent(primary_color = "#035AA6", secondary_color = "#03A696")
 Después de los tres acentos invertidos del bloque y dentro de los corchetes deben colocar:  
 `{r xaringan-themer, include = F}`
 ]
+
+---
+class: inverse, center, middle
+
+# En conclusión
+
+---
+## Conclusión
+
+- *Xaringan* es una libreía que nos permite crear presentaciones customizables 
+
+- Los archivos de texto plano de *Xaringan* se encuentran en formato Rmd y se renderizan a html
+
+- Para configurar el archivo Rmd de *Xaringan* usamos el YAML
+
+- La customización del contenido de la presentación requiere de archivos CSS
+
+- *Xaringan-themer* es una librería útil para mejorar la estética de la presentación final
+
+- En *Xaringan* podemos escribir código de distintos lenguajes y evaluarlo al renderizar
+
+---
+class: inverse, middle
+background-image: url("KLM_747.jpeg")
+background-position: 100% 50%
+background-size: 45% 90%
+
+.left[
+.large[¡Gracias!
+]
+]
+
+
+.left[
+`r icons::icon_style(icons::fontawesome("envelope"), fill = "white")` rodolfo_chvz@outlook.com
+`r icons::icon_style(icons::fontawesome("github"), fill = "white")` @necrosnake91
+`r icons::icon_style(icons::fontawesome("link"), fill = "white")` necrosnake91.github.io/Xaringan_tutorial/
+`r icons::icon_style(icons::fontawesome("twitter"), fill = "white")` @Rodolfo_snake
+]
+
 
 

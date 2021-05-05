@@ -43,24 +43,23 @@
   --header-h3-font-size: 1.75rem;
 
   /* Colors */
-  --text-color: #000000;
+  --text-color: #18273F;
   --header-color: #23395b;
-  --background-color: #FFFFFF;
+  --background-color: #E9EBEE;
   --link-color: #23395b;
   --text-bold-color: #23395b;
   --code-highlight-color: rgba(255,255,0,0.5);
-  --inverse-text-color: #000000;
-  --inverse-background-color: #EAECEE;
-  --inverse-header-color: #000000;
+  --inverse-text-color: #E9EBEE;
+  --inverse-background-color: #23395b;
+  --inverse-header-color: #E9EBEE;
   --inverse-link-color: #23395b;
   --title-slide-background-color: #23395b;
-  --title-slide-text-color: #FFFFFF;
+  --title-slide-text-color: #E9EBEE;
   --header-background-color: #23395b;
-  --header-background-text-color: #FFFFFF;
-  --primary: #23395b;
-  --secondary: #EAECEE;
-  --white: #FFFFFF;
-  --black: #000000;
+  --header-background-text-color: #E9EBEE;
+  --base: #23395b;
+  --white: #E9EBEE;
+  --black: #18273F;
 }
 
 html {
@@ -174,7 +173,7 @@ img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px #EAECEE80;
+  border-left: solid 5px #23395b80;
   padding-left: 1em;
 }
 .remark-slide table {
@@ -189,7 +188,7 @@ th, td {
   padding: 5px;
 }
 .remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
-  background: #FAFBFB;
+  background: #D3D7DE;
 }
 table.dataTable tbody {
   background-color: var(--background-color);
@@ -199,7 +198,7 @@ table.dataTable.display tbody tr.odd {
   background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
-  background-color: #FAFBFB;
+  background-color: #D3D7DE;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -239,17 +238,11 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   }
 }
 
-.primary {
-  color: var(--primary);
+.base {
+  color: var(--base);
 }
-.bg-primary {
-  background-color: var(--primary);
-}
-.secondary {
-  color: var(--secondary);
-}
-.bg-secondary {
-  background-color: var(--secondary);
+.bg-base {
+  background-color: var(--base);
 }
 .white {
   color: var(--white);
